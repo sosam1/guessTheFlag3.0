@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+    background-image: url('./img/4k.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.country-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+
+    width: 100%;
+    max-width: 600px;
+}
+
+#country-name {
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+}
+
+#flag {
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+    object-fit: cover;
+
+    border: .5px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+
+    -webkit-user-drag: none;
+}
+
+#flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 10px;
+    margin: 5px 0;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    cursor: pointer;
+    background-color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+button:hover {
+    background-color: #e6e6e6;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .country-container {
+        max-width: 500px;
+        padding: 1.5rem;
+    }
+
+    #flag {
+        max-width: 280px;
+        height: 175px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .country-container {
+        padding: 1.2rem;
+        border-radius: 8px;
+    }
+
+    #score {
+        font-size: 1.5rem;
+    }
+
+    #country-name {
+        font-size: 1.1rem;
+        margin: 10px 0 15px;
+    }
+
+    #flag {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 8 / 5;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    button {
+        max-width: 100%;
+        padding: 12px 8px;
+        font-size: 0.95rem;
+    }
+}
+
+/* CELULARES MUY PEQUEÑOS */
+@media (max-width: 350px) {
+    .country-container {
+        padding: 1rem;
+    }
+
+    #score {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+    }
+}
